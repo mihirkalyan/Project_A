@@ -182,3 +182,25 @@ cython_debug/
 # Claude Code personal files
 CLAUDE.local.md
 .claude/settings.local.json
+
+# Secrets and credentials
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+id_rsa*
+id_ed25519*
+secrets/
+credentials*.json
+service-account*.json
+*.secret
+*.secrets
+
+# Local tooling and OS files
+.mcp.local.json
+.claude/*.local.*
+.DS_Store
+Thumbs.db
