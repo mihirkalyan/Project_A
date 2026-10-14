@@ -1,0 +1,36 @@
+.panel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: var(--z-menu);
+  border-top: var(--border-px) solid var(--color-accent-hot);
+  border-bottom: var(--border-px) solid var(--color-accent-hot);
+  background: var(--color-bg);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: var(--space-8);
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-8);
+}
+
+.head {
+  display: grid;
+  align-content: start;
+  gap: var(--space-2);
+}
+
+.heading {
+  color: var(--color-accent-bright);
+  font-size: var(--display-24);
+  text-transform: lowercase;
+}
+
+.intro {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}

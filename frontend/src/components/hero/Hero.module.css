@@ -1,0 +1,78 @@
+.hero {
+  display: grid;
+  gap: var(--space-8);
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: calc(var(--space-8) * 2) var(--space-6) var(--space-8);
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-8);
+}
+
+.copy {
+  display: grid;
+  gap: var(--space-4);
+  max-width: var(--measure);
+}
+
+.kicker {
+  color: var(--color-accent-hot-text);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+}
+
+.title {
+  font-size: var(--display-24);
+}
+
+/* hot accent is only allowed at display sizes >= 24px */
+.name {
+  color: var(--color-accent-hot);
+}
+
+.pitch {
+  color: var(--color-text-muted);
+  font-size: var(--text-lg);
+}
+
+.ghost {
+  flex-shrink: 0;
+}
+
+/* graph-paper surface under the terminal */
+.paper {
+  padding: var(--space-8);
+  border: var(--border-px) solid var(--color-accent-hot);
+  background-color: var(--color-paper);
+  background-image:
+    linear-gradient(var(--color-paper-grid) var(--hairline), transparent var(--hairline)),
+    linear-gradient(90deg, var(--color-paper-grid) var(--hairline), transparent var(--hairline));
+  background-size: var(--grid-paper-size) var(--grid-paper-size);
+}
+
+@media (min-width: 48rem) {
+  .title {
+    font-size: var(--display-32);
+  }
+}
+
+@media (min-width: 64rem) {
+  .title {
+    font-size: var(--display-48);
+  }
+}
+
+@media (max-width: 47.99rem) {
+  .intro {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  .paper {
+    padding: var(--space-4);
+  }
+}

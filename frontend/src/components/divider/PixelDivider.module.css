@@ -1,0 +1,28 @@
+/*
+ * Three stacked rows of blocks build a stepped, jagged top edge:
+ *   row 1: 1-pixel teeth every 6 pixels
+ *   row 2: 3-pixel teeth every 6 pixels (centred under row 1)
+ *   row 3: solid bar
+ */
+.divider {
+  --tile: calc(var(--pixel) * 6);
+
+  height: calc(var(--pixel) * 3);
+  margin: var(--space-4) 0;
+  background:
+    linear-gradient(
+        90deg,
+        transparent calc(var(--pixel) * 2.5),
+        var(--color-accent-hot) calc(var(--pixel) * 2.5) calc(var(--pixel) * 3.5),
+        transparent calc(var(--pixel) * 3.5)
+      )
+      top / var(--tile) var(--pixel) repeat-x,
+    linear-gradient(
+        90deg,
+        transparent calc(var(--pixel) * 1.5),
+        var(--color-accent-hot) calc(var(--pixel) * 1.5) calc(var(--pixel) * 4.5),
+        transparent calc(var(--pixel) * 4.5)
+      )
+      center / var(--tile) var(--pixel) repeat-x,
+    linear-gradient(var(--color-accent-hot), var(--color-accent-hot)) bottom / 100% var(--pixel) no-repeat;
+}

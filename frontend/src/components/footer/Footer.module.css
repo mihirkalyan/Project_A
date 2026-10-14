@@ -1,0 +1,25 @@
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-6);
+  font-size: var(--text-sm);
+}
+
+.name {
+  color: var(--color-accent-bright);
+  font-family: var(--font-display);
+}
+
+.links {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.note {
+  color: var(--color-text-muted);
+}

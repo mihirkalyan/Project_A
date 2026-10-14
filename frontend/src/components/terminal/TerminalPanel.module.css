@@ -1,0 +1,85 @@
+.terminal {
+  border: var(--border-px) solid var(--color-accent-hot);
+  background: var(--color-bg);
+  box-shadow: var(--shadow-pixel);
+  color: var(--color-text);
+  font-family: var(--font-mono);
+}
+
+.chrome {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: var(--space-4);
+  padding: 0 var(--space-3);
+  border-bottom: var(--border-px) solid var(--color-accent-hot);
+}
+
+.dots {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.dots > span {
+  width: var(--space-2);
+  height: var(--space-2);
+  background: var(--color-line);
+}
+
+.tablist {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: var(--space-2) var(--space-3);
+  border: 0;
+  background: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+}
+
+.tab:hover {
+  color: var(--color-text);
+}
+
+.tab[aria-selected='true'] {
+  background: var(--color-accent-bright);
+  color: var(--color-ink);
+}
+
+.panel {
+  display: grid;
+  gap: var(--space-3);
+  min-height: calc(var(--space-8) * 4);
+  padding: var(--space-4);
+  font-size: var(--text-sm);
+}
+
+.block {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.line {
+  overflow-wrap: anywhere;
+}
+
+.prompt {
+  color: var(--color-accent-bright);
+}
+
+.command {
+  font-family: var(--font-mono);
+}
+
+.output {
+  color: var(--color-text-muted);
+}
+
+.actions {
+  margin-top: var(--space-2);
+}

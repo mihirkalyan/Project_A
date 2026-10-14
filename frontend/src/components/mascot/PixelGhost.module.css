@@ -1,0 +1,71 @@
+.ghost {
+  width: calc(var(--ghost-pixel) * 16);
+  height: calc(var(--ghost-pixel) * 16);
+  overflow: visible;
+  shape-rendering: crispEdges;
+  animation: bob var(--ghost-cycle) var(--motion-step) infinite;
+}
+
+.body {
+  fill: var(--color-text);
+}
+
+.outline {
+  fill: var(--color-accent-hot);
+}
+
+.visor {
+  fill: var(--color-ink);
+}
+
+.eye,
+.antenna {
+  fill: var(--color-accent-bright);
+}
+
+/*
+ * Two frames swap with one keyframe: opacity 1 -> -1 under steps(2) yields
+ * exactly 1 then 0; frame B runs half a cycle out of phase (0 then 1).
+ */
+.frameA,
+.frameB {
+  animation: flip var(--ghost-cycle) var(--motion-step) infinite;
+}
+
+.frameB {
+  opacity: 0;
+  animation-delay: calc(var(--ghost-cycle) / -2);
+}
+
+@keyframes flip {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: -1;
+  }
+}
+
+/* 2-step bob: steps(2) over two sprite pixels gives 0 then exactly one pixel up. */
+@keyframes bob {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(var(--ghost-pixel) * -2));
+  }
+}
+
+.ghost[data-motion='off'],
+.ghost[data-motion='off'] .frameA,
+.ghost[data-motion='off'] .frameB {
+  animation: none;
+}
+
+.ghost[data-motion='off'] .frameA {
+  opacity: 1;
+}
+
+.ghost[data-motion='off'] .frameB {
+  opacity: 0;
+}

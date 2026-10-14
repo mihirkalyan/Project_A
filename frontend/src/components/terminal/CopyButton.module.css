@@ -1,0 +1,26 @@
+.wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.button {
+  padding: var(--space-1) var(--space-2);
+  border: var(--hairline) solid var(--color-accent-bright);
+  background: var(--color-bg);
+  color: var(--color-accent-bright);
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+}
+
+.button:hover {
+  background: var(--color-accent-bright);
+  color: var(--color-ink);
+}
+
+.status {
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+}

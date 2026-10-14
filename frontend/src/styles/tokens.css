@@ -1,0 +1,81 @@
+/*
+ * Design tokens, palette "Electric" (docs/design-brief.md section 3).
+ * The only place raw colour / size / timing values may live, with these
+ * exceptions:
+ * - Media-query breakpoints. Media queries cannot read custom properties,
+ *   so they are repeated as literals and recorded below as --bp-* for
+ *   reference only: 48rem (--bp-mobile; its max-width twin is 47.99rem) in
+ *   component CSS and the NavBar.tsx media query, and 64rem (--bp-wide) in
+ *   Hero.module.css.
+ * - The 1px size of the .visually-hidden utility in global.css.
+ */
+:root {
+  /* colour */
+  --color-bg: #0b0b0f;
+  --color-text: #f2f2f2;
+  --color-text-muted: #b9b9c3;
+  --color-accent-hot: #3a5bff; /* borders, fills, display text >= 24px only */
+  --color-accent-hot-text: #7b90ff; /* small accent text */
+  --color-accent-bright: #ffd400;
+  --color-ink: #0b0b0f;
+  --color-paper: #e4e4e7;
+  --color-paper-grid: #c9c9cf;
+  --color-line: #2a2a33;
+  --color-bg-grid: rgba(255, 255, 255, 0.05);
+
+  /* grids */
+  --grid-bg-size: 12px;
+  --grid-paper-size: 8px;
+  --hairline: 1px;
+
+  /* type */
+  --font-display: 'Silkscreen', ui-monospace, monospace;
+  --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --font-weight-regular: 400;
+  --font-weight-bold: 600;
+  --display-16: 1rem;
+  --display-24: 1.5rem;
+  --display-32: 2rem;
+  --display-48: 3rem;
+  --display-64: 4rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --leading-tight: 1.25;
+  --leading-body: 1.6;
+
+  /* space: 4px base scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+
+  /* shape */
+  --border-px: 3px;
+  --radius: 0;
+  --shadow-pixel: 4px 4px 0 var(--color-accent-bright);
+  --pixel: 4px; /* one "pixel" in decorative art (divider, title-bar buttons) */
+  --ghost-pixel: 7px; /* one sprite pixel of the mascot (brief: 6-8px) */
+
+  /* layout */
+  --content-max: 72rem;
+  --measure: 40rem;
+  --nav-height: 3rem;
+  --bp-mobile: 48rem; /* documentation only, see header comment */
+  --bp-wide: 64rem; /* documentation only, see header comment */
+  --z-menu: 10;
+  --drawer-width: 24rem;
+  --backdrop-opacity: 0.8;
+
+  /* motion */
+  --motion-step: steps(2);
+  --hover-open-ms: 120ms;
+  --hover-close-ms: 250ms;
+  --ghost-cycle: 1.2s;
+  --blink-cycle: 1s;
+}
